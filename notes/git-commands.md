@@ -96,8 +96,14 @@ git add .
 git commit -m "Added Git command cheat sheet"
 git push
 
-PowerShell scripts
-Git documentation
-Lab structure
+HOW TO TAKE SCREENSHOTS (Windows)
+Easy Method
 
-You’re building a real technical knowledge base already.
+Press:
+
+Windows + Shift + S
+
+Then:
+
+Drag area
+Save image
