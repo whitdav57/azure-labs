@@ -107,3 +107,29 @@ Then:
 
 Drag area
 Save image
+
+Recommended Upgrade
+
+Download latest 64-bit PowerShell:
+
+PowerShell Download Page
+
+Choose:
+
+PowerShell-7.x.x-win-x64.msi
+
+Install it.
+
+Then reopen PowerShell and rerun:
+
+Install-Module Az -Force
+🔥 AZ-104 Pro Tip
+
+After installation, these commands should work:
+
+Get-AzAccount
+Get-AzSubscription
+Get-AzVM
+Get-AzResourceGroup
+
+These are core AZ-104 commands.
