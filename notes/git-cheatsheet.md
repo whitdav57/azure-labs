@@ -133,3 +133,26 @@ Get-AzVM
 Get-AzResourceGroup
 
 These are core AZ-104 commands.
+
+# Git Cheat Sheet
+
+## Check status
+git status
+
+## Add files
+git add .
+
+## Commit changes
+git commit -m "message"
+
+## Upload to GitHub
+git push
+
+## Download updates
+git pull
+
+## View history
+git log --oneline
+
+## View folder structure
+tree /f
