@@ -1,0 +1,23 @@
+# Azure Resource Providers
+
+Location:
+Subscription -> Resource Providers
+
+Purpose:
+Resource providers enable Azure services within a subscription.
+
+Examples:
+- Microsoft.Compute
+- Microsoft.Network
+- Microsoft.Storage
+- Microsoft.Web
+
+Common Issue:
+Deployment fails because provider is NotRegistered.
+
+Fix:
+1. Open Subscription
+2. Select Resource Providers
+3. Choose provider
+4. Click Register
+5. Refresh until status = Registered

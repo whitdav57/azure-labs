@@ -1,0 +1,45 @@
+
+## Managed Disk Lab
+
+1. Created a 32 GiB Standard HDD managed disk
+2. Attached disk to az104-vm1
+3. Stopped (deallocated) VM
+4. Detached disk from VM
+5. Verified using Azure CLI:
+
+az disk show \
+  --resource-group az104-rg8 \
+  --name vm-disk1 \
+  --query "{state:diskState,managedBy:managedBy}"
+
+Result:
+{
+  "managedBy": null,
+  "state": "Unattached"
+}
+
+
+
+
+AZ Disk commands
+
+
+
+
+
+az vm disk detach \
+  --resource-group az104-rg8 \
+  --vm-name az104-vm1 \
+  --name vm-disk1
+
+
+az disk show \
+  --resource-group az104-rg8 \
+  --name vm-disk1 \
+  --query "{state:diskState,managedBy:managedBy}"
+
+
+az disk delete \
+  --resource-group az104-rg8 \
+  --name vm-disk1 \
+  --yes
