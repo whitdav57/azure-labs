@@ -1,0 +1,146 @@
+
+</> Markdown
+# AZ-104 Lab 09b: Implement Azure Container Instances
+
+## Objective
+Deploy and validate an Azure Container Instance.
+
+## Why This Matters
+Azure Container Instances allows you to run a containerized workload without managing virtual machines or a Kubernetes cluster.
+
+## Services Used
+- Azure Container Instances
+- Resource Group
+- Public IP / DNS label
+- Container image
+- Azure Portal
+
+## Key Concepts
+- Containers vs virtual machines
+- Serverless container hosting
+- Container groups
+- Public access using DNS/FQDN
+- Port exposure
+- Resource cleanup
+
+## Interview Explanation
+I deployed an Azure Container Instance to run a lightweight containerized workload without provisioning or managing a virtual machine. This helped me understand how Azure can host containers directly for simple workloads, testing, automation tasks, or short-lived applications.
+
+## Troubleshooting Notes
+- Confirm the container image name is correct.
+- Confirm the port is open.
+- Confirm the DNS label is unique.
+- Confirm the region supports the selected options.
+- Delete the resource group after the lab to avoid charges.
+
+kubernetes cluster vms is a form of containers
+
+Container Instances for small apps
+
+Container Apps share both
+
+Web apps have a container option
+
+You can burst into an ACI container for scaling u can deploy a container image
+
+
+
+Dock container in a container docker image to publish to azure container registry
+
+docker push and pull
+
+
+ou should know the workflow:
+
+Dockerfile
+↓
+Build image
+↓
+Tag image
+↓
+Push image to Azure Container Registry
+↓
+Deploy image to ACI / App Service / Container Apps
+
+But you probably won’t be asked to write a complex Dockerfile from scratch.
+
+What you should know cold
+1. Azure Container Instances — ACI
+
+Know this phrase:
+
+ACI = fastest way to run a container in Azure without managing servers
+
+Use ACI for:
+
+Simple container workloads
+Quick testing
+Short-running jobs
+One-off containers
+Low administration
+2. Azure Container Registry — ACR
+
+Know this phrase:
+
+ACR = private registry for storing container images in Azure
+
+ACR is where you push/pull images.
+
+You should recognize:
+
+docker pull
+docker tag
+docker push
+az acr login
+3. Container Groups
+
+Know that containers in the same group can share:
+
+IP address
+Lifecycle
+Local network
+Storage volumes
+
+This is testable.
+
+4. Container Apps
+
+Know the difference:
+
+ACI = simple container run
+Container Apps = microservices/serverless container platform
+AKS = full Kubernetes orchestration
+What not to overdo
+
+Do not spend days trying to master:
+
+Advanced Dockerfile syntax
+Kubernetes YAML
+Helm charts
+Docker networking internals
+Complex CI/CD pipelines
+
+That is more AZ-204, AZ-400, or AKS-focused work.
+
+Your priority for this section
+
+Give this section one focused study session, not three days.
+
+Do this:
+
+1. Finish the videos
+2. Build/push one image if the lab requires it
+3. Create ACR
+4. Deploy to ACI or Container App
+5. Take screenshots
+6. Delete resources
+7. Add short GitHub notes
+Exam weight in plain English
+
+Out of a full AZ-104 exam, container-specific questions may only be a small number, but they can appear because Microsoft lists “configure Azure Container Apps,” “configure Azure Container Instances,” and “manage container images with Azure Container Registry” under compute skills. The whole compute domain is 20–25%, so containers are worth learning, but networking, identity, storage, VMs, monitoring, and backup still matter more overall.
+
+My recommendation: finish Containers, understand the service selection questions, document one lab, then move on to Networking. Networking will be heavier for the exam.
+
+
+
+
