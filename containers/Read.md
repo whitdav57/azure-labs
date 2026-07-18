@@ -25,3 +25,8 @@ Build a Docker image, push it to Azure Container Registry, and deploy it using A
 
 ## Cleanup
 Deleted the lab resource group after completion to control costs.
+## Cleanup
+
+After the container was verified in the browser, the container group was deleted from the Azure Portal.
+
+The remaining container lab resources were reviewed to confirm no unnecessary ACI resources continued running.
