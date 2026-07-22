@@ -1,0 +1,36 @@
+# Section 9 - Manage Data in Azure Storage Accounts
+
+## Topics Covered
+
+### Storage Lifecycle Management
+
+* Automatically moves blobs between Hot, Cool, and Archive tiers.
+* Helps reduce storage costs.
+* Uses lifecycle management policies.
+
+### Object Replication
+
+* Replicates block blobs asynchronously between storage accounts.
+* Supports disaster recovery and compliance requirements.
+* Requires blob versioning.
+
+### AzCopy
+
+* Command-line utility for transferring data to and from Azure Storage.
+* Commonly used for bulk uploads and downloads.
+
+Example:
+azcopy copy "C:\Data" "https://storageaccount.blob.core.windows.net/container?<SAS>" --recursive
+
+### Storage Browser
+
+* GUI tool for managing Azure Storage resources.
+* Can manage blobs, files, queues, and tables.
+* Available through Azure Portal and Azure Storage Explorer.
+
+## AZ-104 Exam Notes
+
+* Understand Hot, Cool, and Archive access tiers.
+* Know when to use AzCopy versus Azure Storage Explorer.
+* Understand Object Replication and disaster recovery scenarios.
+* Know how Lifecycle Management reduces storage costs.
