@@ -1,0 +1,100 @@
+load balancer ditributes traffic form some where to multiple servers behind it
+
+like a traffic cop distributes 
+
+single VM cannot suffice for for a critical workload 
+
+option 1 Scale UP to adapt the workload
+
+D96 Largest server size 
+
+Option 2 Scaleout Benefits uptime
+
+
+Public load balancer public facing webapps API
+
+internal  LB traffic for internal services
+
+4 types of LB
+
+Azure Load Balancer
+
+Azure Application Gateway
+
+Azure Front door Service CDN 
+
+Standard SKU is the new Option
+
+AZ Zones
+ 
+Zonal and Zone redundant used to build HA multi zone architecture
+
+Load Balancer should run in the same Region
+
+
+backend pool handles the traffic coming through the load balancer decides where to send the traffic.
+
+u can give it rules and point diffeent back end pools to different resources
+
+You can add frontend to backend pool
+
+Health probe checks the servers if enabled can check TCP HTTP/S Health probe decides if the server is connecting properly
+
+Health probes will remove servers from the pool if not healthy
+
+quickstart template on Git-hub
+
+https://github.com/Azure/azure-quickstart-templates
+
+NAT rules providing incoming traffic sent to a selected IP address and port
+
+layer 7 Load balancer is used for application gateways for web apps etc understands http and https rules unserstands TCP UDP NIC cards and
+
+IP addresses
+
+remember 5 ips always reserved in subnet /256 example 254 addresses
+
+
+Azure reserves 5 IP addresses in every subnet: the first four and the last address.
+For a /24 subnet, there are 256 total addresses and 251 usable addresses.
+Exam rule
+
+Remember it this way:
+
+Azure subnet usable IPs = total subnet IPs minus 5
+
+So:
+
+Subnet	Total IPs	Usable in Azure
+/24	256	251
+/27	32	27
+/28	16	11
+/29	8	3
+
+This matters on AZ-104 when a question asks whether a subnet is large enough for VMs, Application Gateway, VPN Gateway, private endpoints, or scale sets.
+
+In Azure, every subnet loses 5 IP addresses because Azure reserves them for networking functions. Microsoft documents this as the first four addresses and the last address in each subnet.
+
+Example: /24 subnet
+
+For this subnet:
+
+10.1.0.0/24
+
+There are 256 total addresses:
+
+10.1.0.0 through 10.1.0.255
+
+But Azure reserves these 5:
+
+Address	Reserved for
+10.1.0.0	Network address
+10.1.0.1	Azure default gateway
+10.1.0.2	Azure DNS mapping
+10.1.0.3	Azure DNS mapping
+10.1.0.255	Broadcast address
+
+So the usable range is:
+
+10.1.0.4 through 10.1.0.254
+
